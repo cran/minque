@@ -13,8 +13,8 @@ The package can be used for various linear mixed linear model analyses.
 \tabular{ll}{
 Package: \tab MINQUE\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2014-01-15\cr
+Version: \tab 1.1\cr
+Date: \tab 2014-09-06\cr
 License: \tab GPL-2\cr
 }
  An overview of how to use the package, including the most important functions

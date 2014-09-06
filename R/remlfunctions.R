@@ -10,8 +10,14 @@ lmm.simudata=function(formula, data = list(),v,b,SimuNum=NULL){
     YS=gdata$Y
     return(YS)
 }
-
 lmm=function(formula,data = list(),method=NULL,ALPHA=NULL){
+   if(is.null(method))method=c("minque")
+   if(is.null(ALPHA))ALPHA=0.05
+   if (is.null(data))data=NULL
+   return(lmm1(formula,data=data,method=method,ALPHA=ALPHA))
+}
+
+lmm1=function(formula,data = list(),method=NULL,ALPHA=NULL){
     if(is.null(method))method=c("minque")
     if(is.null(ALPHA))ALPHA=0.05
     if (is.null(data))gdata = mixed.data(formula)
@@ -62,8 +68,16 @@ lmm=function(formula,data = list(),method=NULL,ALPHA=NULL){
     RES$ALPHA=ALPHA
     return(RES)
 }
-
 lmm.jack=function(formula,data = list(),method=NULL,JacNum=NULL,JacRep=NULL,ALPHA=NULL){
+    if(is.null(method))method=c("minque")
+    if(is.null(JacNum))JacNum=10
+    if(is.null(JacRep))JacRep=1
+    if(is.null(ALPHA))ALPHA=0.05
+    if(is.null(data))data=NULL
+    res=lmm.jack1(formula,data=data,method=method,JacNum=JacNum,JacRep=JacRep,ALPHA=ALPHA)
+    return(res)
+}
+lmm.jack1=function(formula,data = list(),method=NULL,JacNum=NULL,JacRep=NULL,ALPHA=NULL){
     if(is.null(method))method=c("minque")
     if(is.null(JacNum))JacNum=10
     if(is.null(JacRep))JacRep=1
@@ -116,7 +130,7 @@ lmm.jack=function(formula,data = list(),method=NULL,JacNum=NULL,JacRep=NULL,ALPH
     return(RES)
 }
 
-lmm.jack1=function(formula,lmlist=NULL){
+lmm.jack0=function(formula,lmlist=NULL){
     # data = list(),method=NULL,JacNum=NULL,JacRep=NULL,ALPHA=NULL){
     if(is.null(lmlist)){
         method=c("minque")

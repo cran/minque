@@ -47,13 +47,13 @@ Searle, S. R., Casella, G. and McCulloch, C. E. 1992. Variance Components. John 
 
 Wu J (2012) GenMod: An R package for various agricultural data analyses.  ASA, CSSA, and SSSA 2012 International Annual Meetings, Cincinnati, OH, p 127
 
-Wu J., Bondalapati K., Glover K., Berzonsky W., Jenkins J.N., McCarty J.C. 2013. Genetic analysis without replications: model evaluation and application in spring wheat. Euphytica. 190:447-458 
+Wu J., Bondalapati K., Glover K., Berzonsky W., Jenkins J.N., McCarty J.C. 2013. Genetic analysis without replications: model evaluation and application in spring wheat. Euphytica. 190:447-458
 
 Zhu J. 1989. Estimation of Genetic Variance Components in the General Mixed Model. Ph.D. Dissertation, NC State University, Raleigh, U.S.A
 
 }
 \author{
-Jixiang Wu <qgtools@gmail.com>
+Jixiang Wu <jixiang.wu@sdstate.edu>
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -61,7 +61,7 @@ Jixiang Wu <qgtools@gmail.com>
 \examples{
   library(minque)
   data(ncii)
-  
+
   lmm.inf=lmm.check(Yld~1|Female*Male+Rep,data=ncii)
 
   lmm.inf  ##there are five variance components
@@ -72,7 +72,7 @@ Jixiang Wu <qgtools@gmail.com>
   Male=factor(ncii$Male)
   Rep=factor(ncii$Rep)
   res=lmm.simu.jack(Y~1|Female*Male+Rep)
-  res[[1]]
+  res
 
   #End
 

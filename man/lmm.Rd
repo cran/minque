@@ -47,13 +47,13 @@ Searle, S. R., Casella, G. and McCulloch, C. E. 1992. Variance Components. John 
 
 Wu J (2012) GenMod: An R package for various agricultural data analyses.  ASA, CSSA, and SSSA 2012 International Annual Meetings, Cincinnati, OH, p 127
 
-Wu J., Bondalapati K., Glover K., Berzonsky W., Jenkins J.N., McCarty J.C. 2013. Genetic analysis without replications: model evaluation and application in spring wheat. Euphytica. 190:447-458 
+Wu J., Bondalapati K., Glover K., Berzonsky W., Jenkins J.N., McCarty J.C. 2013. Genetic analysis without replications: model evaluation and application in spring wheat. Euphytica. 190:447-458
 
 Zhu J. 1989. Estimation of Genetic Variance Components in the General Mixed Model. Ph.D. Dissertation, NC State University, Raleigh, U.S.A
 
 }
 \author{
-Jixiang Wu <qgtools@gmail.com>
+Jixiang Wu <jixiang.wu@sdstate.edu>
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -62,10 +62,10 @@ Jixiang Wu <qgtools@gmail.com>
 \examples{
   library(minque)
   data(ncii)
-  res=lmm(Yld~1|Female*Male+Rep,data=ncii,method=c("reml","minque"))
-  res[[1]]$Var
-  res[[1]]$FixedEffect
-  res[[1]]$RandomEffect
+  res=lmm(Yld~1|Female*Male+Rep,data=ncii)
+  res$Var
+  res$FixedEffect
+  res$RandomEffect
   #End
 
 }

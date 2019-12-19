@@ -5,7 +5,7 @@
   NC design II F1 data
 }
 \description{
-  A genetic data set can be analyzed by ANOVA or MIQNUE approaches. 
+  A genetic data set can be analyzed by ANOVA or MIQNUE approaches.
 }
 \usage{data(ncii)}
 \format{
@@ -31,17 +31,17 @@
  data(ncii)
 
  res=lmm(Yld~1|Female*Male+Rep,data=ncii)
- res[[1]]$Var
- res[[1]]$FixedEffect
- res[[1]]$RandomEffect
+ res$Var
+ res$FixedEffect
+ res$RandomEffect
 
  res=lmm.jack(Yld~1|Female*Male+Rep,data=ncii,
-    method=c("reml","minque"),JacNum=10,JacRep=1,ALPHA=0.05)
- res[[1]]$Var
- res[[1]]$PVar
- 
- res[[1]]$FixedEffect
- res[[1]]$RandomEffect
+    JacNum=10,JacRep=1,ALPHA=0.05)
+ res$Var
+ res$PVar
+
+ res$FixedEffect
+ res$RandomEffect
 
 }
 \keyword{ datasets }

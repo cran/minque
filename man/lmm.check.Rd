@@ -5,7 +5,7 @@
 An R function to obtain information from a linear mixed model
 }
 \description{
-Sometimes users may need run some simulations for a given data structure  and/or a model. This function will give users the information used for simulation. 
+Sometimes users may need run some simulations for a given data structure  and/or a model. This function will give users the information used for simulation.
 }
 \usage{
 lmm.check(formula, data = list())
@@ -25,26 +25,26 @@ Return the information that will be used to preset values for simulation
 %%  If it is a LIST, use
  \item{comp1 }{Number of variance components including one for random error}
  \item{comp2 }{Names for all variance components not including the one for random error}
- \item{comp3 }{Levels of effects for each fixed effect component } 
+ \item{comp3 }{Levels of effects for each fixed effect component }
  \item{comp4 }{Names of all fixed effects}
 %% ...
 }
 
 \author{
-Jixiang Wu <qgtools@gmail.com>
+Jixiang Wu <jixiang.wu@sdstate.edu>
 }
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \examples{
-  
+
   library(minque)
   data(ncii)
   ncii$Female=factor(ncii$Female)
   lmm.inf=lmm.check(Yld~Female|Female*Male+Rep,data=ncii)
   lmm.inf
-  
+
   #End
 
 

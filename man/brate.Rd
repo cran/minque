@@ -36,17 +36,17 @@ No other details are needed
  brate$Geno=factor(brate$Geno)
  brate$Pos=factor(brate$Pos)
  brate$Rep=factor(brate$Rep)
- 
+
  res=lmm(Brate~1|Geno*Pos+Rep,data=brate)
- res[[1]]$Var
- res[[1]]$FixedEffect
- res[[1]]$RandomEffect
+ res$Var
+ res$FixedEffect
+ res$RandomEffect
 
  res=lmm.jack(Brate~1|Geno*Pos+Rep,data=brate,JacNum=10,JacRep=1,ALPHA=0.05)
- res[[1]]$Var
- res[[1]]$PVar
- res[[1]]$FixedEffect
- res[[1]]$RandomEffect
+ res$Var
+ res$PVar
+ res$FixedEffect
+ res$RandomEffect
  ## end
 }
 \keyword{ datasets }

@@ -2,7 +2,7 @@
 \alias{maize}
 \docType{data}
 \title{
-Maize variety trial 
+Maize variety trial
 }
 \description{
 Maize variety trial with two years and multi-locations in China.
@@ -27,23 +27,23 @@ Fan X.M., Kang M.S., Chen H.M., Zhang Y.D., Tan J., Xu C.X. (2007) Yield stabili
 Fan X.M., Kang M.S., Chen H.M., Zhang Y.D., Tan J., Xu C.X. (2007) Yield stability of maize hybrids evaluated in multi-environment trials in Yunnan, China. Agronomy Journal.99:220-228
 }
 \examples{
- 
+
  library(minque)
  data(maize)
  #names(maize)
 
  res=lmm(Yld~1|Cultivar*Year+Cultivar*Location+Year*Location,data=maize)
- res[[1]]$Var
- res[[1]]$FixedEffect
- res[[1]]$RandomEffect
+ res$Var
+ res$FixedEffect
+ res$RandomEffect
 
  res=lmm.jack(Yld~1|Cultivar*Year+Cultivar*Location+Year*Location,
     data=maize,JacNum=10,JacRep=1,ALPHA=0.05)
- res[[1]]$Var
- res[[1]]$PVar
- res[[1]]$FixedEffect
- res[[1]]$RandomEffect
- 
+ res$Var
+ res$PVar
+ res$FixedEffect
+ res$RandomEffect
+
  ##End
 
 }

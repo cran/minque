@@ -3,25 +3,25 @@
 \alias{minque}
 \docType{package}
 \title{
-An R Package for Various Linear Mixed Models Analyses
+Various Linear Mixed Model Analyses
 
 }
 \description{
-The package can be used for various linear mixed linear model analyses. 
+This package offers three important components: (1) to construct a use-defined linear mixed model, (2) to employ one of linear mixed model approaches: minimum norm quadratic unbiased estimation (MINQUE) (Rao, 1971) for variance component estimation and random effect prediction;(3) to employ a jackknife resampling technique to conduct various statistical tests; and (4) to conduct various model evaluations. This R package offers fast computations for large data sets analyses for various irregular data structures.
 }
 \details{
 \tabular{ll}{
-Package: \tab MINQUE\cr
+Package: \tab minque\cr
 Type: \tab Package\cr
-Version: \tab 1.1\cr
-Date: \tab 2014-09-06\cr
-License: \tab GPL-2\cr
+Version: \tab 2.0\cr
+Date: \tab 2019-12-18\cr
+License: \tab GPL-3\cr
 }
  An overview of how to use the package, including the most important functions
 }
 \author{
-Jixiang Wu, Assistant Professor of Quantitative Genetics/Biostatistics,
-\\Jixiang Wu <qgtools@gmail.com>
+Jixiang Wu, Associate Professor of Quantitative Genetics/Biostatistics,
+\\Jixiang Wu <jixiang.wu@sdstate.edu>
 
 }
 \references{
@@ -38,7 +38,7 @@ Searle, S. R., Casella, G. and McCulloch, C. E. 1992. Variance Components. John 
 
 Wu J (2012) GenMod: An R package for various agricultural data analyses.  ASA, CSSA, and SSSA 2012 International Annual Meetings, Cincinnati, OH, p 127
 
-Wu J., Bondalapati K., Glover K., Berzonsky W., Jenkins J.N., McCarty J.C. 2013. Genetic analysis without replications: model evaluation and application in spring wheat. Euphytica. 190:447-458 
+Wu J., Bondalapati K., Glover K., Berzonsky W., Jenkins J.N., McCarty J.C. 2013. Genetic analysis without replications: model evaluation and application in spring wheat. Euphytica. 190:447-458
 
 Zhu J. 1989. Estimation of Genetic Variance Components in the General Mixed Model. Ph.D. Dissertation, NC State University, Raleigh, U.S.A
 

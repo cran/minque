@@ -5,7 +5,7 @@
    Twenty four cotton genotypes with four agronomic traits
 }
 \description{
-  Twentype four cotton genotypes were evaluated under two locations at the Mississippi State University Research Farm. 
+  Twentype four cotton genotypes were evaluated under two locations at the Mississippi State University Research Farm.
 }
 \usage{data(cot)}
 \format{
@@ -39,17 +39,17 @@
  cot$Rep=factor(cot$REP)
 
  res=lmm(LY~1|Geno*Loc+Loc:Rep,data=cot)
- res[[1]]$Var
- res[[1]]$FixedEffect
- res[[1]]$RandomEffect
+ res$Var
+ res$FixedEffect
+ res$RandomEffect
 
  res=lmm.jack(LY~1|Geno*Loc+Loc:Rep,data=cot,JacNum=10,JacRep=1,ALPHA=0.05)
- res[[1]]$Var
- res[[1]]$PVar
- res[[1]]$FixedEffect
- res[[1]]$RandomEffect
+ res$Var
+ res$PVar
+ res$FixedEffect
+ res$RandomEffect
 
- 
+
 
  ##End
 }

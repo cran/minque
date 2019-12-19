@@ -1,2 +1,14 @@
-import(Matrix, klaR)
+importFrom("graphics", "abline", "arrows", "legend", "plot", "points",
+               "text")
+importFrom("stats", "aov", "as.formula", "coef", "complete.cases",
+               "cor", "cor.test", "cov", "deviance", "df.residual", "lm",
+               "model.frame", "model.matrix", "model.response", "pchisq",
+               "pf", "predict", "pt", "qt", "quantile", "rnorm", "var")
+importFrom("utils", "combn")
+
+importFrom("stats", "na.omit")
+
+##    import(mvngGrAd)
+
 export(lmm,lmm.jack,lmm.simudata,lmm.simu,lmm.simu.jack,lmm.perm,lmm.check)
+
